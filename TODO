@@ -1,0 +1,24 @@
+Django
+Celery
+Postgres connection
+Twitter library with support for streaming connections
+
+
+
+Set up empty db and postgres user account
+
+sudo adduser twidar-tester
+
+
+Run redis as daemon
+
+
+Get south, jquery, datatables
+
+
+
+
+Monitor users
+
+Monitor keyword searches
+
