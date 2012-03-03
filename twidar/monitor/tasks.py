@@ -32,11 +32,13 @@ def tweet_stream_task(follow_list=None, track_list=None):
     #stream.filter(follow_list, track_list)
     stream.sample()         # Blocks by default
 
+tweets = []
+
 #@task
 def save_tweet(status):
     """
     Pushes a status into the database
     """
+    tweets.append(status)
     print 'saved tweet'
-    tweet = status
     return
