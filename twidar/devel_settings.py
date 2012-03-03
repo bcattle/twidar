@@ -1,4 +1,6 @@
 # Django settings for twidar project.
+TWITTER_USERNAME = 'twidar2'
+TWITTER_PASSWORD = 'twidarjohnson'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -127,6 +129,11 @@ INSTALLED_APPS = (
 
 # Celery configuration
 BROKER_URL = "redis://localhost:6379/0"
+# Store task results in redis
+CELERY_RESULT_BACKEND = "redis"
+CELERY_REDIS_HOST = "localhost"
+CELERY_REDIS_PORT = 6379
+CELERY_REDIS_DB = 0
 
 # Setup for Celery
 import djcelery

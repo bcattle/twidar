@@ -1,0 +1,30 @@
+Tweepy
+
+https://github.com/tweepy/examples/blob/master/streamwatcher.py
+
+tweepy.StreamListener
+
+on_status
+on_error
+on_timeout
+
+
+username = raw_input('Twitter username: ')
+    password = getpass('Twitter password: ')
+    stream = tweepy.Stream(username, password, StreamWatcherListener(), timeout=None)
+    stream.filter(follow_list, track_list)
+
+
+
+SixOhSix Twitter
+
+ stream = TwitterStream(auth=UserPassAuth(args[0], args[1]))
+ tweet_iter = stream.statuses.sample()
+ 
+ 
+ TwitterStream
+ |
+ TwitterStreamCall		_handle_response -> handle_stream_response -> TwitterJSONIter
+ |
+ TwitterCall	
+ 
