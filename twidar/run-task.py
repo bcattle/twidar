@@ -10,4 +10,8 @@ setup_environ(settings)
 import pickle
 tweets = pickle.load(open('tweets.p'))
 
-pass
+from monitor.models import Status
+for tweet in tweets:
+    status = Status(obj=tweet)
+    status.save()
+
